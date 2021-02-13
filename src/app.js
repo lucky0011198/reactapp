@@ -28,6 +28,7 @@ app.get('/sec',auth,(req,res)=>{
 })
 app.get('/logout',auth, async(req,res)=>{
     try{
+     //console.log(req.user);
       req.user.tokens=[];
       console.log(req.user);
       res.clearCookie("jwt");
