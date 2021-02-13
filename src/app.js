@@ -29,10 +29,6 @@ app.get('/sec',auth,(req,res)=>{
 app.get('/logout',auth, async(req,res)=>{
     try{
       req.user.tokens=[];
-      //for singal device logout......
-      //req.user.tokens = req.user.tokens.filter((currentemenent)=>{
-      //    return currentemenent.token != req.token
-      //})
       console.log(req.user);
       res.clearCookie("jwt");
       alert("logout successfully");
