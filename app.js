@@ -11,7 +11,7 @@ const auth = require("./src/middleware/auth");
 require("./db/conn");
 const templets_path = path.join(__dirname, "../Templets/views");
 const partials_path = path.join(__dirname, "../Templets/partials");
-const port = process.env.PORT || 2000;
+const port = process.env.PORT || 3000;
 app.set('view engine', '.hbs');
 app.set("views", templets_path);
 hbs.registerPartials(partials_path);
@@ -95,6 +95,6 @@ app.post('/login', async (req, res) => {
         res.status(400).send("invalid email");
     }
 })
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("express is connected at 2000")
 })
