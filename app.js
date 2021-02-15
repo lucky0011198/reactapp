@@ -19,9 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //console.log(process.env.SCRET_KEY);
-app.get('/home',auth,(req, res) => {
-    console.log(`my cookie is ${req.cookies.jwt}`);
-    res.render("index");
+app.get('/',auth,(req, res) => {
+    res.send('Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
 })
 app.get('/sec',auth,(req,res)=>{
     res.render("login");
