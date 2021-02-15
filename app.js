@@ -4,11 +4,11 @@ const express = require('express');
 const path = require("path");
 const hbs = require("hbs");
 const bcrypt = require("bcrypt");
-const register = require("./models/register");
+const register = require("./src/models/register");
 const app = express();
 const cookieParser = require("cookie-parser")
-const auth = require("./middleware/auth");
-require("../db/conn");
+const auth = require("./src/middleware/auth");
+require("./db/conn");
 const templets_path = path.join(__dirname, "../Templets/views");
 const partials_path = path.join(__dirname, "../Templets/partials");
 const port = process.env.PORT || 2000;
