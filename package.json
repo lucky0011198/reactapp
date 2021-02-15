@@ -2,7 +2,7 @@
   "name": "lucky",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "engines": {
     "node": "14.15.3",
     "npm" :"6.14.10"
