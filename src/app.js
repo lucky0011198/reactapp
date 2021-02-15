@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //console.log(process.env.SCRET_KEY);
-app.get('/',auth,(req, res) => {
+app.get('/home',auth,(req, res) => {
     console.log(`my cookie is ${req.cookies.jwt}`);
     res.render("index");
 })
